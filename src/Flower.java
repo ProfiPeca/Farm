@@ -1,9 +1,16 @@
 public abstract class Flower {
 
     protected String name;
-    protected double price;
-    protected double neededArea;
+    protected int price;
+    protected int neededArea;
     protected double chanceOfGrowth;
+
+    /**
+     * waters the current plant, giving it higher chance of growing
+     */
+    public void waterPlant(){
+        this.chanceOfGrowth=2*chanceOfGrowth;
+    }
 
     @Override
     public String toString() {
